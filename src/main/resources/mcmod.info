@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "sleeplessmod",
+  "name": "Sleepless Mod",
+  "description": "Player has to sleep",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Yuki Kuwashima"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
