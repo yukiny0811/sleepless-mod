@@ -29,7 +29,6 @@ public class PlayerExtendedCapabilityManageEvent implements TickManagement {
     @SubscribeEvent
     public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event){
         if(event == null) return;
-
         setValueToTickManager(()->{
             setValue();
         }, 50);
@@ -41,4 +40,5 @@ public class PlayerExtendedCapabilityManageEvent implements TickManagement {
             setValue();
         }, 50);
     }
+
 }

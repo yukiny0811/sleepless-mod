@@ -1,9 +1,18 @@
 package com.yukiny.sleeplessmod.others.tick_manager;
 
+import com.yukiny.sleeplessmod.SleeplessMod;
 import com.yukiny.sleeplessmod.others.Organizer;
 import com.yukiny.sleeplessmod.others.player_extended_capability.PlayerExtendedCapabilities;
 import com.yukiny.sleeplessmod.others.player_extended_capability.PlayerExtendedCapabilityProvider;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.VertexBuffer;
+import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -31,8 +40,8 @@ public class TickManager {
                 delayCount.remove(i);
             }
         }
-        if(Organizer.isWaitingForCapabilityUpdate){
-            if(event.player instanceof EntityPlayerMP){
+        if(Organizer.isWaitingForCapabilityUpdate) {
+            if (event.player instanceof EntityPlayerMP) {
                 PlayerExtendedCapabilities player_cap = event.player.getCapability(PlayerExtendedCapabilityProvider.PLAYER_CAP, null);
                 player_cap.setFusaiValue(player_cap.getFusaiValue() + 1);
                 Organizer.fusaiValue = player_cap.getFusaiValue();

@@ -5,4 +5,5 @@ public class Organizer {
     public static int fusaiValue = 0;
     public static boolean isWaitingForCapabilityUpdate = false;
     public static boolean isHyper = false;
+    public static boolean isRedBull = false;
 }
